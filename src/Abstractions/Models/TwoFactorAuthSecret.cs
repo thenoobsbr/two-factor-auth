@@ -39,7 +39,7 @@ public class TwoFactorAuthSecret
         return !ReferenceEquals(obj, null) &&
                (ReferenceEquals(this, obj) ||
                 obj is TwoFactorAuthSecret other &&
-                Value == other.Value);
+                GetHashCode() == other.GetHashCode());
     }
 
     public override string ToString()
