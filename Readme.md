@@ -1,6 +1,6 @@
 ﻿[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=tiagor87_Tr2FA&metric=coverage)](https://sonarcloud.io/dashboard?id=tiagor87_Tr2FA)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=tiagor87_Tr2FA&metric=alert_status)](https://sonarcloud.io/dashboard?id=tiagor87_Tr2FA)
-[![NuGet](https://buildstats.info/nuget/TR2FA)](http://www.nuget.org/packages/TR2FA.Core)
+[![NuGet](https://buildstats.info/nuget/TRTwoFactorAuth.Core)](http://www.nuget.org/packages/TRTwoFactorAuth.Core)
 
 # TR2FA
 
