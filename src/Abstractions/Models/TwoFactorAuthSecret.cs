@@ -2,7 +2,7 @@
 
 namespace TRTwoFactorAuth.Abstractions.Models;
 
-public record TwoFactorAuthSecret
+public class TwoFactorAuthSecret
 {
     protected const string ALPHABET = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ234567";
     protected const int LENGTH = 32;
@@ -28,6 +28,19 @@ public record TwoFactorAuthSecret
     }
     
     public string Value { get; }
+
+    public override int GetHashCode()
+    {
+        return Value.GetHashCode();
+    }
+
+    public override bool Equals(object? obj)
+    {
+        return !ReferenceEquals(obj, null) &&
+               (ReferenceEquals(this, obj) ||
+                obj is TwoFactorAuthSecret other &&
+                Value == other.Value);
+    }
 
     public override string ToString()
     {

@@ -3,7 +3,7 @@ using TRTwoFactorAuth.Abstractions.Models;
 
 namespace TRTwoFactorAuth.Core.Models;
 
-public record HashidTwoFactorAuthSecret : TwoFactorAuthSecret
+public sealed class HashidTwoFactorAuthSecret : TwoFactorAuthSecret
 {
     private static readonly Random _random = new();
 
@@ -21,10 +21,5 @@ public record HashidTwoFactorAuthSecret : TwoFactorAuthSecret
             .Select(_ => _random.Next(MAX_VALUE))
             .ToList();
         return hashids.Encode(numbers);
-    }
-
-    public override string ToString()
-    {
-        return base.ToString();
     }
 }

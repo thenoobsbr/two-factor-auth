@@ -37,4 +37,12 @@ public class TwoFactorAuthSecretTests
         secret.ToString().Should().MatchRegex("^\\w{6}\\*{22}\\w{4}$");
     }
     
+    [Fact]
+    public void GivenSecret_WhenCompareSameValue_ThenShouldBeTrue()
+    {
+        var secret = new HashidTwoFactorAuthSecret();
+        var secret2 = new TwoFactorAuthSecret(secret.Value);
+
+        secret.Should().Be(secret2);
+    }
 }

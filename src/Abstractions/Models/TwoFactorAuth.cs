@@ -12,13 +12,16 @@ public class TwoFactorAuth
 
     public Uri GenerateUri()
     {
-        const string URI = "otpauth://totp/{0}?secret={1}&issuer={2}";
-        var qrCodeUri = string.Format(
-            URI,
+        const string SCHEME = "otpauth";
+        const string HOST = "totp";
+
+        return new UriBuilder(
+            SCHEME,
+            HOST,
+            0,
             Uri.EscapeDataString($"{Issuer.Value}:{Label.Value}"),
-            Secret.Value,
-            Uri.EscapeDataString(Issuer.Value));
-        return new Uri(qrCodeUri);
+            $"?secret={Secret.Value}&issuer={Uri.EscapeDataString(Issuer.Value)}")
+            .Uri;
     }
 
     public TwoFactorAuthType Type { get; }

@@ -3,7 +3,6 @@
 public record TwoFactorAuthType
 {
     private const string TOTP = "totp";
-    private const string HOTP = "hotp";
     
     private TwoFactorAuthType(string value)
     {
