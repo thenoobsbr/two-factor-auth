@@ -69,10 +69,15 @@ catch (TwoFactorAuthCodeInvalidException ex) {
 }
 ```
 
-> **TwoFactorVerificationRange** permite selecionar uma janela de tempo para verificação de códigos:
-> Imagine que o parâmetro 1 é fornecido:
-> Ao validar o código, aceitaremos como válido, caso seja anterior ao atual (-1), ou posterior ao atual (+1),
-> tendo em vista que os códigos são gerados com base no tempo, é pode ocorrer uma pequena dessincronização entre cliente e servidor.
+> **TwoFactorVerificationRange** permite selecionar uma janela de tempo para verificação de códigos.
+>
+> Imagine que o parâmetro 1 é fornecido.
+> Durante a validação do código, aceitaremos como válido: 
+> - se o  valor anterior ao atual (-1) for o código fornecido;
+> - se o valor atual for o código fornecido;
+> - ou se posterior ao atual (+1) for o código fornecido.
+>
+> Tendo em vista que os códigos são gerados com base no tempo, pode ocorrer uma pequena "confusão" entre cliente (App de autenticação) e servidor (Validador do código).
 
 #### GetNextCode
 
