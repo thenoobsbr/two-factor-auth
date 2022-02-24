@@ -30,6 +30,8 @@ public class TwoFactorAuthSecret
     
     public string Value { get; }
 
+    public static implicit operator string(TwoFactorAuthSecret secret) => secret.Value;
+
     public override int GetHashCode()
     {
         return Value.GetHashCode();
