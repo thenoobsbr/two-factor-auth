@@ -1,4 +1,6 @@
-﻿using HashidsNet;
+﻿using System;
+using System.Linq;
+using HashidsNet;
 using TRTwoFactorAuth.Abstractions.Models;
 
 namespace TRTwoFactorAuth.Core.Models;

@@ -1,4 +1,6 @@
-﻿namespace TRTwoFactorAuth.Abstractions.Models;
+﻿using System;
+
+namespace TRTwoFactorAuth.Abstractions.Models;
 
 public class TwoFactorAuth
 {

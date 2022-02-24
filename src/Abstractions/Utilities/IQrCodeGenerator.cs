@@ -1,4 +1,9 @@
-﻿namespace TRTwoFactorAuth.Abstractions.Utilities;
+﻿using System;
+using System.IO;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace TRTwoFactorAuth.Abstractions.Utilities;
 
 public interface IQrCodeGenerator
 {
