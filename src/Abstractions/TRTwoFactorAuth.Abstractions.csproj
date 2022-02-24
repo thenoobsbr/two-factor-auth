@@ -9,7 +9,7 @@
     <PackageProjectUrl>https://github.com/tiagor87/Tr2FA</PackageProjectUrl>
     <RepositoryUrl>https://github.com/tiagor87/Tr2FA</RepositoryUrl>
     <PackageTags>2fa, mfa, netcore, dotnet, simple</PackageTags>
-    <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
+    <TargetFrameworks>net472;netstandard2.0;netstandard2.1</TargetFrameworks>
     <ProjectGuid>{74D2EB1D-58FA-49CE-BCCA-3CB87BC89571}</ProjectGuid>
   </PropertyGroup>
 
