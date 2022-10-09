@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E2106541-5A7C-4D0C-9905-0C777468F51D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheNoobs.TwoFactorAuth", "src\TheNoobs.TwoFactorAuth\TheNoobs.TwoFactorAuth.csproj", "{46723C71-45C3-415C-8E97-A2F7FBEEC5A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheNoobs.TwoFactorAuth.Abstractions", "src\TheNoobs.TwoFactorAuth.Abstractions\TheNoobs.TwoFactorAuth.Abstractions.csproj", "{74D2EB1D-58FA-49CE-BCCA-3CB87BC89571}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{D1366834-A7D2-46DF-9AD1-602A91B3A60F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheNoobs.TwoFactorAuth.UnitTests", "tests\TheNoobs.TwoFactorAuth.UnitTests\TheNoobs.TwoFactorAuth.UnitTests.csproj", "{84AC512F-BEC2-4734-91B5-4595A79170A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46723C71-45C3-415C-8E97-A2F7FBEEC5A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46723C71-45C3-415C-8E97-A2F7FBEEC5A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46723C71-45C3-415C-8E97-A2F7FBEEC5A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46723C71-45C3-415C-8E97-A2F7FBEEC5A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74D2EB1D-58FA-49CE-BCCA-3CB87BC89571}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74D2EB1D-58FA-49CE-BCCA-3CB87BC89571}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74D2EB1D-58FA-49CE-BCCA-3CB87BC89571}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74D2EB1D-58FA-49CE-BCCA-3CB87BC89571}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84AC512F-BEC2-4734-91B5-4595A79170A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84AC512F-BEC2-4734-91B5-4595A79170A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84AC512F-BEC2-4734-91B5-4595A79170A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84AC512F-BEC2-4734-91B5-4595A79170A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{46723C71-45C3-415C-8E97-A2F7FBEEC5A2} = {E2106541-5A7C-4D0C-9905-0C777468F51D}
+		{74D2EB1D-58FA-49CE-BCCA-3CB87BC89571} = {E2106541-5A7C-4D0C-9905-0C777468F51D}
+		{84AC512F-BEC2-4734-91B5-4595A79170A3} = {D1366834-A7D2-46DF-9AD1-602A91B3A60F}
+	EndGlobalSection
+EndGlobal

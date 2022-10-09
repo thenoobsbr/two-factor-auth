@@ -1,0 +1,4 @@
+﻿variables:
+  - group: two-factor-auth
+  - group: sonar
+  - group: nuget

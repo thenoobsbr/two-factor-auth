@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net6.0;netstandard2.0</TargetFrameworks>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <IsPackable>true</IsPackable>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <OutputType>library</OutputType>
+    <GenerateFullPaths>true</GenerateFullPaths>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Authors>The Noobs</Authors>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <RepositoryType>GIT</RepositoryType>
+    <LangVersion>default</LangVersion>
+    <PackageIcon>icon.png</PackageIcon>
+
+    <PackageId>TheNoobs.TwoFactorAuth</PackageId>
+    <Description>Two factor authentication simple library.</Description>
+    <PackageProjectUrl>https://github.com/thenoobsbr/two-factor-auth</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/thenoobsbr/two-factor-auth</RepositoryUrl>
+    <PackageTags>2fa, mfa, netcore, dotnet, simple</PackageTags>
+
+    <UserSecretsId>{FFFC25A6-7048-4D30-A5FE-02FAA16218F8}</UserSecretsId>
+    <ProjectGuid>{46723C71-45C3-415C-8E97-A2F7FBEEC5A2}</ProjectGuid>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Hashids.net" Version="1.4.1" />
+    <PackageReference Include="Otp.NET" Version="1.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TheNoobs.TwoFactorAuth.Abstractions\TheNoobs.TwoFactorAuth.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>
