@@ -1,15 +1,31 @@
 <Project Sdk="Microsoft.NET.Sdk">
+  
+  <PropertyGroup>
+    <TargetFrameworks>net6.0;netstandard2.0</TargetFrameworks>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <IsPackable>true</IsPackable>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <OutputType>library</OutputType>
+    <GenerateFullPaths>true</GenerateFullPaths>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
 
   <PropertyGroup>
-    <Nullable>enable</Nullable>
-    <LangVersion>10</LangVersion>
-    <Title>TR2FA.Abstractions</Title>
-    <Authors>Tiago de Carvalho Resende</Authors>
+    <Authors>The Noobs</Authors>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <RepositoryType>GIT</RepositoryType>
+    <LangVersion>default</LangVersion>
+    <PackageIcon>icon.png</PackageIcon>
+
+    <PackageId>TheNoobs.TwoFactorAuth.Abstractions</PackageId>
     <Description>Two factor authentication simple library abstractions.</Description>
-    <PackageProjectUrl>https://github.com/tiagor87/Tr2FA</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/tiagor87/Tr2FA</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/thenoobsbr/two-factor-auth</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/thenoobsbr/two-factor-auth</RepositoryUrl>
     <PackageTags>2fa, mfa, netcore, dotnet, simple</PackageTags>
-    <TargetFrameworks>net472;netstandard2.0;netstandard2.1</TargetFrameworks>
+
+    <UserSecretsId>{EAC3F2C8-66E0-448F-9997-D0E04F1DB5BC}</UserSecretsId>
     <ProjectGuid>{74D2EB1D-58FA-49CE-BCCA-3CB87BC89571}</ProjectGuid>
   </PropertyGroup>
 
