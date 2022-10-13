@@ -1,9 +1,9 @@
 ﻿using System;
 using FluentAssertions;
-using TheNoobs.TwoFactorAuth.Abstractions.Models;
+using TheNoobs.TwoFactorAuth.Abstractions;
 using Xunit;
 
-namespace TheNoobs.TwoFactorAuth.UnitTests.Models;
+namespace TheNoobs.TwoFactorAuth.UnitTests;
 
 public class TwoFactorAuthLabelTests
 {
@@ -17,7 +17,7 @@ public class TwoFactorAuthLabelTests
         label.Should().NotBeNull();
         label.ToString().Should().Be(labelText);
     }
-    
+
     [Theory]
     [InlineData(" ")]
     [InlineData("a really very long label")]

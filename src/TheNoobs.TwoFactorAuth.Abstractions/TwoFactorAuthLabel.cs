@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TheNoobs.TwoFactorAuth.Abstractions.Models;
+﻿namespace TheNoobs.TwoFactorAuth.Abstractions;
 
 public record TwoFactorAuthLabel
 {
@@ -15,7 +13,7 @@ public record TwoFactorAuthLabel
         {
             throw new ArgumentException("Label cannot be longer than 20 characters.", nameof(value));
         }
-        
+
         Value = value;
     }
     public string Value { get; }

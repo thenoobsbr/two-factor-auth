@@ -4,11 +4,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using FluentAssertions;
 using NSubstitute;
-using TheNoobs.TwoFactorAuth.Abstractions.Models;
+using TheNoobs.TwoFactorAuth.Abstractions;
 using TheNoobs.TwoFactorAuth.Abstractions.Services;
 using TheNoobs.TwoFactorAuth.Abstractions.Utilities;
 using TheNoobs.TwoFactorAuth.Exceptions;
-using TheNoobs.TwoFactorAuth.Models;
 using TheNoobs.TwoFactorAuth.Services;
 using Xunit;
 
@@ -30,7 +29,7 @@ public class TwoFactorAuthServiceTests
     {
         var issuer = new TwoFactorAuthIssuer("issuer");
         var label = new TwoFactorAuthLabel("label");
-        var secret = new HashidTwoFactorAuthSecret();
+        var secret = new TwoFactorAuthHashidSecret();
 
         _qrCodeGenerator.GenerateAsync(Arg.Any<Uri>(), Arg.Any<CancellationToken>())
             .Returns(Task.FromResult<Stream>(new MemoryStream()));
@@ -43,7 +42,7 @@ public class TwoFactorAuthServiceTests
     [Fact]
     public async Task GivenTwoFactorAuthService_WhenGetNextCode_ThenShouldReturnValidCode()
     {
-        var secret = new HashidTwoFactorAuthSecret();
+        var secret = new TwoFactorAuthHashidSecret();
         
         var code = await _sut.GetNextCodeAsync(secret);
 
@@ -55,7 +54,7 @@ public class TwoFactorAuthServiceTests
     [Fact]
     public async Task GivenTwoFactorAuthService_WhenValidateInvalidCode_ThenShouldThrow()
     {
-        var secret = new HashidTwoFactorAuthSecret();
+        var secret = new TwoFactorAuthHashidSecret();
 
         var action = () => _sut.ValidateCodeAsync(new TwoFactorAuthCode("000000"), secret);
         
@@ -65,7 +64,7 @@ public class TwoFactorAuthServiceTests
     [Fact]
     public async Task GivenTwoFactorAuthService_WhenValidateInvalidCode_ThenShouldNotThrow()
     {
-        var secret = new HashidTwoFactorAuthSecret();
+        var secret = new TwoFactorAuthHashidSecret();
 
         var code = await _sut.GetNextCodeAsync(secret);
 

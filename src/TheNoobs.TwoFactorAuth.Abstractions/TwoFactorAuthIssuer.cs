@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TheNoobs.TwoFactorAuth.Abstractions.Models;
+﻿namespace TheNoobs.TwoFactorAuth.Abstractions;
 
 public record TwoFactorAuthIssuer
 {
@@ -15,7 +13,7 @@ public record TwoFactorAuthIssuer
         {
             throw new ArgumentException("Issuer cannot be longer than 20 characters.", nameof(value));
         }
-        
+
         Value = value;
     }
     public string Value { get; }

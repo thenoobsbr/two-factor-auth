@@ -1,9 +1,4 @@
-﻿using System.IO;
-using System.Threading;
-using System.Threading.Tasks;
-using TheNoobs.TwoFactorAuth.Abstractions.Models;
-
-namespace TheNoobs.TwoFactorAuth.Abstractions.Services;
+﻿namespace TheNoobs.TwoFactorAuth.Abstractions.Services;
 
 public interface ITwoFactorAuthService
 {

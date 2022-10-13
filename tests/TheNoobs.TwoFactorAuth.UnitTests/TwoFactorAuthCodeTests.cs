@@ -1,9 +1,9 @@
 ﻿using System;
 using FluentAssertions;
-using TheNoobs.TwoFactorAuth.Abstractions.Models;
+using TheNoobs.TwoFactorAuth.Abstractions;
 using Xunit;
 
-namespace TheNoobs.TwoFactorAuth.UnitTests.Models;
+namespace TheNoobs.TwoFactorAuth.UnitTests;
 
 public class TwoFactorAuthCodeTests
 {
@@ -15,7 +15,7 @@ public class TwoFactorAuthCodeTests
         code.Should().NotBeNull();
         code.Value.Should().Be("123456");
     }
-    
+
     [Fact]
     public void GivenTwoFactorCode_WhenReadAsString_ThenShouldReturnValue()
     {
@@ -24,7 +24,7 @@ public class TwoFactorAuthCodeTests
         code.Should().NotBeNull();
         code.ToString().Should().Be("123456");
     }
-    
+
     [Theory]
     [InlineData(" ")]
     [InlineData("abcdef")]

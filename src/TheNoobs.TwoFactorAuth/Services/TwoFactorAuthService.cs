@@ -1,5 +1,5 @@
 ﻿using OtpNet;
-using TheNoobs.TwoFactorAuth.Abstractions.Models;
+using TheNoobs.TwoFactorAuth.Abstractions;
 using TheNoobs.TwoFactorAuth.Abstractions.Services;
 using TheNoobs.TwoFactorAuth.Abstractions.Utilities;
 using TheNoobs.TwoFactorAuth.Exceptions;
@@ -17,7 +17,7 @@ public class TwoFactorAuthService : ITwoFactorAuthService
 
     public async Task<Stream> GenerateQrCodeAsync(TwoFactorAuthIssuer issuer, TwoFactorAuthLabel label, TwoFactorAuthSecret secret, CancellationToken cancellationToken = default)
     {
-        var twoFactorAuth = new Abstractions.Models.TwoFactorAuth(TwoFactorAuthType.TimeBasedOneTimePassword, issuer, label, secret);
+        var twoFactorAuth = new Abstractions.TwoFactorAuth(TwoFactorAuthType.TimeBasedOneTimePassword, issuer, label, secret);
         var uri = twoFactorAuth.GenerateUri();
         var stream = await _qrCodeGenerator.GenerateAsync(uri, cancellationToken);
         return stream;

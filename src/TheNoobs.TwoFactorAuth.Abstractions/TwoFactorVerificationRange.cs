@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TheNoobs.TwoFactorAuth.Abstractions.Models;
+﻿namespace TheNoobs.TwoFactorAuth.Abstractions;
 
 public record TwoFactorVerificationRange
 {
@@ -10,7 +8,7 @@ public record TwoFactorVerificationRange
         Start = rangeStart;
         End = rangeEnd;
     }
-    
+
     public TwoFactorVerificationRange(int range) : this(range * -1, range)
     {
     }

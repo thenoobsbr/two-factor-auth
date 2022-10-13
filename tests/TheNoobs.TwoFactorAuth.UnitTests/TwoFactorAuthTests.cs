@@ -1,10 +1,9 @@
-﻿using System;
+using System;
 using FluentAssertions;
-using TheNoobs.TwoFactorAuth.Abstractions.Models;
-using TheNoobs.TwoFactorAuth.Models;
+using TheNoobs.TwoFactorAuth.Abstractions;
 using Xunit;
 
-namespace TheNoobs.TwoFactorAuth.UnitTests.Models;
+namespace TheNoobs.TwoFactorAuth.UnitTests;
 
 public class TwoFactorAuthTests
 {
@@ -13,8 +12,8 @@ public class TwoFactorAuthTests
     {
         var issuer = new TwoFactorAuthIssuer("issuer");
         var label = new TwoFactorAuthLabel("label");
-        var secret = new HashidTwoFactorAuthSecret();
-        var twoFactorAuth = new Abstractions.Models.TwoFactorAuth(TwoFactorAuthType.TimeBasedOneTimePassword, issuer, label, secret);
+        var secret = new TwoFactorAuthHashidSecret();
+        var twoFactorAuth = new Abstractions.TwoFactorAuth(TwoFactorAuthType.TimeBasedOneTimePassword, issuer, label, secret);
 
         twoFactorAuth.Should().NotBeNull();
         twoFactorAuth.Type.Should().Be(TwoFactorAuthType.TimeBasedOneTimePassword);
@@ -22,7 +21,7 @@ public class TwoFactorAuthTests
         twoFactorAuth.Label.Should().Be(label);
         twoFactorAuth.Secret.Should().Be(secret);
     }
-    
+
     [Theory]
     [InlineData("issuer", "label")]
     [InlineData("space issuer", "space label")]
@@ -30,9 +29,9 @@ public class TwoFactorAuthTests
     {
         var issuer = new TwoFactorAuthIssuer(issuerText);
         var label = new TwoFactorAuthLabel(labelText);
-        var secret = new HashidTwoFactorAuthSecret();
-        
-        var twoFactorAuth = new Abstractions.Models.TwoFactorAuth(TwoFactorAuthType.TimeBasedOneTimePassword, issuer, label, secret);
+        var secret = new TwoFactorAuthHashidSecret();
+
+        var twoFactorAuth = new Abstractions.TwoFactorAuth(TwoFactorAuthType.TimeBasedOneTimePassword, issuer, label, secret);
         var uri = twoFactorAuth.GenerateUri();
 
         uri.Should().NotBeNull();

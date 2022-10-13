@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TheNoobs.TwoFactorAuth.Abstractions.Models;
+﻿namespace TheNoobs.TwoFactorAuth.Abstractions;
 
 public class TwoFactorAuth
 {

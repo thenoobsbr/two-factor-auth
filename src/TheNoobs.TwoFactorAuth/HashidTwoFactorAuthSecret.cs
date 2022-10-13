@@ -1,13 +1,13 @@
 ﻿using HashidsNet;
-using TheNoobs.TwoFactorAuth.Abstractions.Models;
+using TheNoobs.TwoFactorAuth.Abstractions;
 
-namespace TheNoobs.TwoFactorAuth.Models;
+namespace TheNoobs.TwoFactorAuth;
 
-public sealed class HashidTwoFactorAuthSecret : TwoFactorAuthSecret
+public sealed class TwoFactorAuthHashidSecret : TwoFactorAuthSecret
 {
     private static readonly Random _random = new();
 
-    public HashidTwoFactorAuthSecret() : base(GenerateCode())
+    public TwoFactorAuthHashidSecret() : base(GenerateCode())
     {
     }
 

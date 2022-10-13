@@ -1,14 +1,13 @@
-﻿using System;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 
-namespace TheNoobs.TwoFactorAuth.Abstractions.Models;
+namespace TheNoobs.TwoFactorAuth.Abstractions;
 
-public class TwoFactorAuthSecret
+public abstract class TwoFactorAuthSecret
 {
     protected const string ALPHABET = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ234567";
     protected const int LENGTH = 32;
-    
-    public TwoFactorAuthSecret(string value)
+
+    protected TwoFactorAuthSecret(string value)
     {
         if (string.IsNullOrWhiteSpace(value))
         {
@@ -24,10 +23,10 @@ public class TwoFactorAuthSecret
         {
             throw new ArgumentException($"Secret must only contain characters from the alphabet \"{ALPHABET}\": \"{value}\"", nameof(value));
         }
-        
+
         Value = value;
     }
-    
+
     public string Value { get; }
 
     public static implicit operator string(TwoFactorAuthSecret secret) => secret.Value;

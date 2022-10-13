@@ -1,9 +1,9 @@
 ﻿using System;
 using FluentAssertions;
-using TheNoobs.TwoFactorAuth.Abstractions.Models;
+using TheNoobs.TwoFactorAuth.Abstractions;
 using Xunit;
 
-namespace TheNoobs.TwoFactorAuth.UnitTests.Models;
+namespace TheNoobs.TwoFactorAuth.UnitTests;
 
 public class TwoFactorVerificationRangeTests
 {
@@ -20,7 +20,7 @@ public class TwoFactorVerificationRangeTests
 
         range.Should().NotBeNull();
     }
-    
+
     [Theory]
     [InlineData(0)]
     [InlineData(1)]
@@ -34,7 +34,7 @@ public class TwoFactorVerificationRangeTests
 
         range.Should().NotBeNull();
     }
-    
+
     [Theory]
     [InlineData(1, 1)]
     [InlineData(-1, -1)]
@@ -46,7 +46,7 @@ public class TwoFactorVerificationRangeTests
 
         action.Should().Throw<ArgumentException>();
     }
-    
+
     [Theory]
     [InlineData(-1)]
     [InlineData(6)]

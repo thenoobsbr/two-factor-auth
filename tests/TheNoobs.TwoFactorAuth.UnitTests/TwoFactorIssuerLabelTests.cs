@@ -1,9 +1,9 @@
 ﻿using System;
 using FluentAssertions;
-using TheNoobs.TwoFactorAuth.Abstractions.Models;
+using TheNoobs.TwoFactorAuth.Abstractions;
 using Xunit;
 
-namespace TheNoobs.TwoFactorAuth.UnitTests.Models;
+namespace TheNoobs.TwoFactorAuth.UnitTests;
 
 public class TwoFactorIssuerLabelTests
 {
@@ -17,7 +17,7 @@ public class TwoFactorIssuerLabelTests
         issuer.Should().NotBeNull();
         issuer.ToString().Should().Be(issuerText);
     }
-    
+
     [Theory]
     [InlineData(" ")]
     [InlineData("a really very long issuer")]
