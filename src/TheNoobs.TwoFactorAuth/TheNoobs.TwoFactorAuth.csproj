@@ -38,4 +38,8 @@
     <ProjectReference Include="..\TheNoobs.TwoFactorAuth.Abstractions\TheNoobs.TwoFactorAuth.Abstractions.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="..\..\images\icon.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
 </Project>

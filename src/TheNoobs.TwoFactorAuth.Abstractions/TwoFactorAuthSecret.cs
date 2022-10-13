@@ -46,6 +46,17 @@ public abstract class TwoFactorAuthSecret
 
     public override string ToString()
     {
-        return Value.Substring(0, 6) + string.Empty.PadLeft(Value.Length - 10, '*') + Value.Substring(Value.Length - 4);
+        #if NET6_0_OR_GREATER
+            return string.Concat(
+                Value.AsSpan(0, 6),
+                string.Empty.PadLeft(Value.Length - 10, '*').AsSpan(),
+                Value.AsSpan(Value.Length - 4));
+        #else
+            return string.Concat(
+                Value.Substring(0, 6),
+                string.Empty.PadLeft(Value.Length - 10, '*'),
+                Value.Substring(Value.Length - 4));
+        #endif
+
     }
 }

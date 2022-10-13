@@ -1,5 +1,5 @@
-﻿[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=thenoobs_two-factor-auth&metric=coverage)](https://sonarcloud.io/dashboard?id=thenoobs_two-factor-auth)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=thenoobs_two-factor-auth&metric=alert_status)](https://sonarcloud.io/dashboard?id=thenoobs_two-factor-auth)
+﻿[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=thenoobsbr_two-factor-auth&metric=coverage)](https://sonarcloud.io/dashboard?id=thenoobsbr_two-factor-auth)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=thenoobsbr_two-factor-auth&metric=alert_status)](https://sonarcloud.io/dashboard?id=thenoobsbr_two-factor-auth)
 [![NuGet](https://buildstats.info/nuget/TheNoobs.TwoFactorAuth)](http://www.nuget.org/packages/TheNoobs.TwoFactorAuth)
 
 # TheNoobs.TwoFactorAuth

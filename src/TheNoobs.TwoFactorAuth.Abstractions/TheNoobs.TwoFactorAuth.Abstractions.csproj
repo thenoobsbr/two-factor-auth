@@ -29,4 +29,8 @@
     <ProjectGuid>{74D2EB1D-58FA-49CE-BCCA-3CB87BC89571}</ProjectGuid>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="..\..\images\icon.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
 </Project>
