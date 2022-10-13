@@ -1,8 +1,8 @@
-﻿[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=tiagor87_Tr2FA&metric=coverage)](https://sonarcloud.io/dashboard?id=tiagor87_Tr2FA)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=tiagor87_Tr2FA&metric=alert_status)](https://sonarcloud.io/dashboard?id=tiagor87_Tr2FA)
-[![NuGet](https://buildstats.info/nuget/TRTwoFactorAuth.Core)](http://www.nuget.org/packages/TRTwoFactorAuth.Core)
+﻿[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=thenoobs_two-factor-auth&metric=coverage)](https://sonarcloud.io/dashboard?id=thenoobs_two-factor-auth)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=thenoobs_two-factor-auth&metric=alert_status)](https://sonarcloud.io/dashboard?id=thenoobs_two-factor-auth)
+[![NuGet](https://buildstats.info/nuget/TheNoobs.TwoFactorAuth)](http://www.nuget.org/packages/TheNoobs.TwoFactorAuth)
 
-# TR2FA
+# TheNoobs.TwoFactorAuth
 
 Simplifica a utilização da autenticação em dois fatores.
 
